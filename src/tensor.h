@@ -116,10 +116,7 @@ namespace utec {
             static std::array<size_t, Rank> make_shape(Dims... dims) {
                 static_assert(sizeof...(Dims) == Rank, "Incorrect number of dimensions");
                 return std::array<size_t, Rank>{static_cast<size_t>(dims)...};
-}
-// ...existing code...
-
-            
+}            
 
 
 
@@ -529,8 +526,6 @@ namespace utec {
     }  // namespace algebra
 }  // namespace utec
 
-// ...existing code...
-
 template<typename T, size_t DIMS, typename Func>
 utec::algebra::Tensor<T, DIMS> apply(const utec::algebra::Tensor<T, DIMS>& input, Func&& func) {
     auto result = input;
@@ -541,7 +536,6 @@ utec::algebra::Tensor<T, DIMS> apply(const utec::algebra::Tensor<T, DIMS>& input
 template <typename T, size_t N>
 using Tensor = utec::algebra::Tensor<T, N>;
 
-// ...existing code...
 
 #endif //PROG3_NN_FINAL_PROJECT_V2025_01_TENSOR_H
 
